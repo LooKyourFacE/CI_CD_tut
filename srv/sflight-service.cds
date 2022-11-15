@@ -1,6 +1,7 @@
-using btp.academy as btp from '../db/sflight-model';
+using btp.academy as registry from '../db/registry';
+using btp.academy as movments from '../db/movments';
 
-service SflightService{
-    entity Customers as projection on btp.SCUSTOM;
-    entity CustomersWalldorfView as projection on btp.SCUSTOM_V;
+service SflightService {
+    entity RegistryAccounts as projection on registry.RegistryAccounts;
+    entity MovmentsMaster   as projection on movments.MovmentsMaster;
 }
